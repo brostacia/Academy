@@ -1,0 +1,314 @@
+@font-face {
+	font-family: 'Quicksand';
+	src: url('../fonts/Quicksand-Regular.eot');
+	src: local('☺'), url('../fonts/Quicksand-Regular.woff') format('woff'), url('../fonts/Quicksand-Regular.ttf') format('truetype'), url('../fonts/Quicksand-Regular.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Quicksand';
+	src: url('../fonts/Quicksand-Bold.eot');
+	src: local('☺'), url('../fonts/Quicksand-Bold.woff') format('woff'), url('../fonts/Quicksand-Bold.ttf') format('truetype'), url('../fonts/Quicksand-Bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Quicksand';
+	src: url('../fonts/Quicksand-Light.eot');
+	src: local('☺'), url('../fonts/Quicksand-Light.woff') format('woff'), url('../fonts/Quicksand-Light.ttf') format('truetype'), url('../fonts/Quicksand-Light.svg') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Quicksand';
+	src: url('../fonts/Quicksand-Medium.eot');
+	src: local('☺'), url('../fonts/Quicksand-Medium.woff') format('woff'), url('../fonts/Quicksand-Medium.ttf') format('truetype'), url('../fonts/Quicksand-Medium.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+
+body{
+	font-family: 'Quicksand';
+	font-size: 16px;
+	color: #000;
+	font-weight: 400;
+}
+
+/* Container
+===================*/
+.container{
+	position: relative;
+	width: 100%;
+	max-width: 1146px;
+	margin: 0 auto;
+	padding: 0 15px;
+	border-left: 1px #000 solid;
+	border-right: 1px #000 solid;
+}
+
+/* Header
+===================*/
+.header {
+	
+	position: absolute;
+	height: 100px;
+	width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+	 .fixed {
+		height: auto;
+		position: fixed;
+		background-color: #e6e8f5;
+  }
+	&::before {
+		content: "AppSon";
+		padding: 20px 20px 28px;
+		background-color: #0f7bff;
+
+		color: #fff;
+		font-size: 36px;
+		font-weight: 700;
+		border-bottom-left-radius: 17px;
+		border-bottom-right-radius: 17px;
+
+		position: absolute;
+		top: 0;
+    	left: -15%;
+	}
+}
+
+.nav {
+	display: flex;
+	justify-content: flex-end;
+	position: absolute;
+	top: 45px;
+	right: -31px;
+
+	&__link {
+		font-weight: 500;
+		color: #929292;
+		text-transform: uppercase;
+		margin-left: 32px;
+		text-decoration: none;
+
+		opacity: .75;
+    	transition: opacity .1s linear;
+		 &:hover{
+			opacity: 1;
+		 }
+		&:first-child {
+			margin-left: 0;
+	  	}
+		&.active{
+			color: #0f7cff;
+		}
+
+	}
+}
+
+.btn {
+	display: inline-block;
+	font-weight: bold;
+	color: #fff;
+	background-color: #0063dd;
+	padding: 15px 51px;
+  	border-radius: 25px;
+	&--header{
+	position: absolute;
+	top: 30px;
+	right: -260px;
+	}
+	&--light{
+		background-color: #0f7cff;
+	}
+	&--white{
+		background-color: #fff;
+		color: #0f7cff;
+		border: 2px solid #0f7cff;
+		padding: 13px 49px;
+	}
+   transition: opacity .1s linear;
+	&:hover{
+		opacity: .7;
+	}
+
+}
+
+/* Intro
+===================*/
+.intro {
+	background: url("/img/Background.svg") center;
+	background-size: cover;
+	overflow: hidden;
+	height: 900px;
+	padding-top: 170px;
+	text-align: center;
+	border-bottom: 1px solid #000;
+	&__inner {
+		max-width: 655px;
+		margin: 0 auto;
+	}
+	&__title {
+		font-size: 36px;
+		font-weight: 700;
+
+		margin-bottom: 30px;
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 1.69;
+		color: #929292;
+
+		margin-bottom: 30px;
+	}
+	&__btns{
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		width: 380px;
+		margin-bottom: 40px;
+	}
+}
+
+.device {
+	position: relative;
+	left: -97px;
+		&__one{
+			position: absolute;
+			top: 33px;
+			left: 0;
+		}
+		&__two {
+			position: absolute;
+			top: -44px;
+			left: 36%;
+			z-index: 2;
+		}
+		&__three {
+			position: absolute;
+			top: 30px;
+			right: -33%;
+ 			
+		}
+}
+
+/* Features
+===================*/
+.features {
+	background: #f5fcfd;
+	position: relative;
+	z-index: -2;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		padding: 165px 0 130px;
+		text-align: center;
+		margin: 0 -15px;
+	}
+
+	&__item {
+		width: 362px;
+		height: 290px;
+		background: #fff;
+		&:nth-child(2){
+			margin-top: 50px;
+		}
+		border-radius: 5px;
+  		box-shadow: 0 4px 16px 0 rgba(0, 66, 148, 0.08);
+	}
+
+	&__icon {
+		margin-top: 40px;
+	}
+
+	&__title {
+		margin-top: 25px;
+		margin-bottom: 25px;
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	&__text {
+		font-weight: 300;
+		margin: 0 15px 47px;
+	}
+}
+
+/* About
+===================*/
+.about {
+	&__item {
+		display: flex;
+		margin: 69px 0 0 -15px;
+		&:nth-child(even) section{
+			padding-left: 0;
+			padding-right: 143px;
+		}
+	}
+
+	&__photo{
+		position: relative;
+		&:before{
+			content: "";
+			position: absolute;
+			width: 389.71px;
+			height: 482.98px;
+			left: 0;
+			top: -72px;
+			z-index: -1;
+			background: linear-gradient(272deg, #0F7BFF 4.58%, #0063DD 78.9%);
+			border-radius: 40px;
+			transform: matrix(0.77, -0.64, -0.64, -0.77, 0, 0);
+		}
+		&:nth-child(even):before{
+			top:0;
+		}
+	}
+
+	&__description {
+		padding-left: 112px;
+	}
+
+	&__title {
+		margin-top: 94px;
+		font-size: 32px;
+		font-weight: 500;
+	}
+
+	&__text {
+		margin: 30px 0 35px 0;
+		font-weight: 300;
+		width: 543px;
+		line-height: 1.5;
+		
+	}
+	&__btns{
+		display: flex;
+	}
+	&__btn{
+		display: block;
+		color: #0063dd;
+		font-weight: 500;
+		margin-right: 15px;
+		transition: opacity .1s linear;
+		&:hover{
+		opacity: .7;
+	}
+}
+	&__arrow{
+		margin-top: 2px;
+		height: 22%;
+		width: 67px;
+		transition: opacity .1s linear;
+		&:hover{
+			opacity: .7;
+	}
+	}
+}

@@ -54,8 +54,7 @@ body{
 
 /* Header
 ===================*/
-.header {
-	
+.header {	
 	position: absolute;
 	height: 100px;
 	width: 100%;
@@ -112,7 +111,7 @@ body{
 
 	}
 }
-
+// all btns with modificators
 .btn {
 	display: inline-block;
 	font-weight: bold;
@@ -134,6 +133,21 @@ body{
 		border: 2px solid #0f7cff;
 		padding: 13px 49px;
 	}
+	&--price-light{
+		border-top-right-radius: 0px;
+		border-bottom-right-radius: 0px;
+		padding: 13px 50px;
+	}
+	&--price-white{
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+		border: solid 3px #0f7bff;
+		border-left: none;
+		padding: 10px 50px;
+		position: relative;
+		top: 0;
+		right: 4px;
+	}
    transition: opacity .1s linear;
 	&:hover{
 		opacity: .7;
@@ -144,10 +158,10 @@ body{
 /* Intro
 ===================*/
 .intro {
-	background: url("./img/background.svg") center;
-	background-size: cover;
+	background: url("/img/background.svg") no-repeat;
+	height: 991px;
+	background-size: auto;
 	overflow: hidden;
-	height: 900px;
 	padding-top: 170px;
 	text-align: center;
 	border-bottom: 1px solid #000;
@@ -182,18 +196,18 @@ body{
 	left: -97px;
 		&__one{
 			position: absolute;
-			top: 33px;
+			top: 104px;
 			left: 0;
 		}
 		&__two {
 			position: absolute;
-			top: -44px;
+			top: 13px;
 			left: 36%;
 			z-index: 2;
 		}
 		&__three {
 			position: absolute;
-			top: 30px;
+			top: 100px;
 			right: -33%;
  			
 		}
@@ -244,6 +258,7 @@ body{
 /* About
 ===================*/
 .about {
+	padding-bottom: 90px;
 	&__item {
 		display: flex;
 		margin: 69px 0 0 -15px;
@@ -310,5 +325,144 @@ body{
 		&:hover{
 			opacity: .7;
 	}
+	}
+}
+
+/* Works
+===================*/
+.works {
+	height: 635px;
+	background: #f5fcfd;
+	position: relative;
+	z-index: -2;
+	&__inner {
+		padding-top: 100px;
+		text-align: center;
+	}
+
+	&__title {
+		font-size: 32px;
+		margin-bottom: 25px;
+	}
+
+	&__text {
+		font-weight: 300;
+		width: 722px;
+		padding-bottom: 45px;
+		margin: 0 auto;
+		line-height: 1.5;
+	}
+}
+
+.steps {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	
+	&__item {
+		position: relative;
+		width: 33.3333%;
+		text-align: center;
+		&:nth-child(2n+2):after{
+			content: "";
+			position: absolute;
+			border-top: 3px dashed #0f7bff;
+			width: 780px;
+			z-index: 1;
+			top: 50px;
+			right: -57%;
+		}
+	}
+
+	&__icon {
+		position: relative;
+		z-index: 2;
+		margin-bottom: 30px;	
+	}
+
+	&__title {
+		font-size: 18px;
+		font-weight: 500;
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		font-weight: 300;
+		line-height: 1.5;
+	
+	}
+}
+
+/* Price
+===================*/
+
+.price {
+
+	&__inner {
+		margin: 130px -15px;
+		display: flex;
+	}
+
+	&__item{
+		width: 392px;
+	}
+
+	&__title {
+		padding-top: 161px;
+		font-size: 32px;
+		font-weight: 500;
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		font-weight: 300;
+		line-height: 1.5;
+		margin-bottom: 40px;
+		width: 332px;
+	}
+}
+
+.cards {
+	width: 66%;
+	display: flex;
+	justify-content: space-between;
+	&__item {
+		height: 576px;
+		width: 362px;
+		text-align: center;
+		border-radius: 5px;
+  		box-shadow: 0 4px 20px 0 rgba(0, 36, 80, 0.08);
+	}
+	&__icon {
+		padding-top: 39px;
+	}
+	&__title {
+		font-size: 18px;
+		font-weight: 700;
+		margin-top: 20px;
+	}
+	hr{
+		border-top: 2px solid #e9f3f8;;
+		width: 303px;
+  		background-color: #e9f3f8;
+	  margin: 23px auto;
+	}
+
+	&__list li{
+		font-weight: 300;
+		line-height: 1.84;
+	}
+
+	&__price {
+		font-size: 32px;
+		font-weight: 500;
+		color: #0f7bff;
+		margin: 26px auto 25px;
+		span{
+			font-size: 16px;
+		}
+	}
+
+	&__btn {
 	}
 }

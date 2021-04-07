@@ -148,6 +148,25 @@ body{
 		top: 0;
 		right: 4px;
 	}
+	&--arrow{
+		background: #fff;
+		color:#0063dd;
+		padding: 0;
+		width: 175px;
+    	height: 50px;
+		span{
+			position: relative;
+			&:after{
+				content: "";
+				background: url("/img/about/Arrow.svg") no-repeat;
+				height: 40px;
+				width: 76px;
+				position: absolute;
+				top: 4px; 
+				right: -92px;
+				}
+		}
+	}
    transition: opacity .1s linear;
 	&:hover{
 		opacity: .7;
@@ -303,28 +322,6 @@ body{
 		width: 543px;
 		line-height: 1.5;
 		
-	}
-	&__btns{
-		display: flex;
-	}
-	&__btn{
-		display: block;
-		color: #0063dd;
-		font-weight: 500;
-		margin-right: 15px;
-		transition: opacity .1s linear;
-		&:hover{
-		opacity: .7;
-	}
-}
-	&__arrow{
-		margin-top: 2px;
-		height: 22%;
-		width: 67px;
-		transition: opacity .1s linear;
-		&:hover{
-			opacity: .7;
-	}
 	}
 }
 
@@ -520,7 +517,7 @@ body{
 ===================*/
 .news {
 	&__inner {
-		margin: 130px -15px 106px;
+		margin: 130px -15px 80px;
 	}
 
 	&__title {
@@ -591,4 +588,169 @@ body{
 		font-weight: 300;
 		width: 339px;
 	}
+}
+
+/* Trial
+===================*/
+.trial {
+	background-color: #f5fcfd;
+	&__inner {
+		padding: 120px 0 113px;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		width: 70%;
+	}
+
+	&__title {
+		font-size: 32px;
+		font-weight: 700;
+		margin-bottom: 25px;
+	}
+
+	&__subtitle {
+		font-weight: 300;
+	}
+
+	&__right{
+		padding-top: 44px;
+		text-align: center;
+		width: 50%;
+	}
+	&__btn {
+		padding: 14px 91px 20px 60px;
+		background: #0f7bff;
+		border-radius: 25px;
+		&--arrow{
+			width: 175px;
+			height: 50px;
+			span{
+				position: relative;
+				color: #fff;
+				font-weight: 700;
+				&:after{
+					content: "";
+					background: url("/img/icons/Arrow-trial.svg") no-repeat;
+					height: 40px;
+					width: 76px;
+					position: absolute;
+					top: 4px; 
+					right: -92px;
+					}
+			}
+		}
+		transition: opacity .1s linear;
+		&:hover{
+		opacity: .7;
+		}
+	}
+	
+}
+
+/* Widget
+===================*/
+.widget {
+	background-color: #0f7bff;
+	padding: 118px 0 119px;
+	&__inner {
+		text-align: center;
+	}
+
+	&__title {
+		font-size: 36px;
+		font-weight: 700;
+		color: #fff;
+		margin-bottom: 30px;
+	}
+
+}
+
+::-webkit-input-placeholder { 
+	color:#fff;
+}
+
+input.widget__email{
+	color:#fff;
+	background-color: #0063dd;
+	width: 391px;
+	height: 50px;
+	border-radius: 25px;
+	padding-left: 28px;
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
+	&:focus{
+		border: 2px solid #0c50a3;
+	}
+}
+
+input.widget__btn {
+	margin-left: -4px;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 17px 40px 17px;
+	color: #0063dd;
+	background-color: #fff;
+	border-radius: 25px;
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 0px;
+	transition: opacity .1s linear;
+	&:hover{
+	opacity: .7;
+	}
+}
+
+/* Widget
+===================*/
+
+// inner 51 50
+
+.footer {
+		background-color: #0063dd;
+		color: #fff;
+		font-weight: 300;
+		&__inner {
+			margin: 0 -15px;
+			display: flex;
+			padding: 51px 0 50px;
+		}
+		&__copyright {
+			width: 50%;
+			margin-top: 9px;
+		}
+		&__right{
+			width: 50%;
+			display: flex;
+			justify-content: space-between;
+		}
+		&__info{
+		margin-top: 9px;
+	}
+		&__info a{
+			width: 60%;
+			color: #fff;
+			font-weight: 300;
+			margin-right: 32px;
+			&:last-child{
+				margin-right: 0;
+			}
+			transition: opacity .1s linear;
+	&:hover{
+	opacity: .7;
+	}
+		}
+}
+.social {
+		width: 40%;
+		text-align: right;
+		&__item {
+			margin-right: 27px;
+			&:last-child{
+				margin-right: 0;
+			}
+			transition: opacity .1s linear;
+	&:hover{
+	opacity: .7;
+	}
+		}
+	
 }

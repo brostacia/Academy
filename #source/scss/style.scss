@@ -33,6 +33,11 @@
 // Файл обнуляющих стилей
 @import "nullstyle.scss";
 
+// *{
+// outline: 1px solid red;
+// }
+
+
 body{
 	font-family: 'Quicksand';
 	font-size: 16px;
@@ -55,11 +60,12 @@ body{
 /* Header
 ===================*/
 .header {	
+	// относительно контейнера
 	position: absolute;
 	height: 100px;
 	width: 100%;
-    top: 0;
-    left: 0;
+   top: 0;
+   left: 0;
     z-index: 1000;
 	 .fixed {
 		height: auto;
@@ -68,7 +74,7 @@ body{
   }
 	&::before {
 		content: "AppSon";
-		padding: 20px 20px 28px;
+		padding: 22px 20px 30px;
 		background-color: #0f7bff;
 
 		color: #fff;
@@ -87,8 +93,8 @@ body{
 	display: flex;
 	justify-content: flex-end;
 	position: absolute;
-	top: 45px;
-	right: -31px;
+	top: 35px;
+	right: 10px;
 
 	&__link {
 		font-weight: 500;
@@ -117,12 +123,12 @@ body{
 	font-weight: bold;
 	color: #fff;
 	background-color: #0063dd;
-	padding: 15px 51px;
+	padding: 15px 44px;
   	border-radius: 25px;
 	&--header{
 	position: absolute;
-	top: 30px;
-	right: -260px;
+	top: 19px;
+   right: -188px;
 	}
 	&--light{
 		background-color: #0f7cff;
@@ -131,22 +137,25 @@ body{
 		background-color: #fff;
 		color: #0f7cff;
 		border: 2px solid #0f7cff;
-		padding: 13px 49px;
+		padding: 13px 42px;
 	}
 	&--price-light{
 		border-top-right-radius: 0px;
 		border-bottom-right-radius: 0px;
-		padding: 13px 50px;
+		padding: 17px 55px;
 	}
 	&--price-white{
 		border-top-left-radius: 0px;
 		border-bottom-left-radius: 0px;
 		border: solid 3px #0f7bff;
 		border-left: none;
-		padding: 10px 50px;
+		padding: 14px 56px;
 		position: relative;
 		top: 0;
 		right: 4px;
+	}
+	&--cards{
+		padding: 16px 50px;
 	}
 	&--arrow{
 		background: #fff;
@@ -171,19 +180,17 @@ body{
 	&:hover{
 		opacity: .7;
 	}
-
 }
 
 /* Intro
 ===================*/
 .intro {
-	background: url("/img/background.svg") no-repeat;
-	height: 991px;
+	background: url("/img/background.svg") center no-repeat;
+	height: 964px;
 	background-size: auto;
 	overflow: hidden;
 	padding-top: 170px;
 	text-align: center;
-	border-bottom: 1px solid #000;
 	&__inner {
 		max-width: 655px;
 		margin: 0 auto;
@@ -215,18 +222,18 @@ body{
 	left: -97px;
 		&__one{
 			position: absolute;
-			top: 104px;
+			top: 93px;
 			left: 0;
 		}
 		&__two {
 			position: absolute;
-			top: 13px;
+			top: 0;
 			left: 36%;
 			z-index: 2;
 		}
 		&__three {
 			position: absolute;
-			top: 100px;
+			top: 91px;
 			right: -33%;
  			
 		}
@@ -241,7 +248,8 @@ body{
 	&__inner {
 		display: flex;
 		justify-content: space-between;
-		padding: 165px 0 130px;
+		flex-wrap: wrap;
+		padding: 125px 0 130px;
 		text-align: center;
 		margin: 0 -15px;
 	}
@@ -250,8 +258,9 @@ body{
 		width: 362px;
 		height: 290px;
 		background: #fff;
+		margin-top: 40px;
 		&:nth-child(2){
-			margin-top: 50px;
+			margin-top: 40px;
 		}
 		border-radius: 5px;
   		box-shadow: 0 4px 16px 0 rgba(0, 66, 148, 0.08);
@@ -280,29 +289,30 @@ body{
 	padding-bottom: 90px;
 	&__item {
 		display: flex;
-		margin: 69px 0 0 -15px;
+		margin: 69px 0 233px -15px;
 		&:nth-child(even) section{
 			padding-left: 0;
 			padding-right: 143px;
 		}
 	}
-
 	&__photo{
 		position: relative;
+		height: auto;
 		&:before{
 			content: "";
 			position: absolute;
 			width: 389.71px;
 			height: 482.98px;
 			left: 0;
-			top: -72px;
+			top: -60px;
 			z-index: -1;
 			background: linear-gradient(272deg, #0F7BFF 4.58%, #0063DD 78.9%);
 			border-radius: 40px;
 			transform: matrix(0.77, -0.64, -0.64, -0.77, 0, 0);
 		}
 		&:nth-child(even):before{
-			top:0;
+			top: 24px;
+    		left: 66px;
 		}
 	}
 
@@ -393,7 +403,6 @@ body{
 /* Price
 ===================*/
 .price {
-
 	&__inner {
 		margin: 130px -15px;
 		display: flex;
@@ -453,7 +462,7 @@ body{
 		font-size: 32px;
 		font-weight: 500;
 		color: #0f7bff;
-		margin: 26px auto 25px;
+		margin: 26px auto 28px;
 		span{
 			font-size: 16px;
 		}
@@ -463,11 +472,13 @@ body{
 /* Reviews
 ===================*/
 .reviews {
+	overflow: hidden;
 	height: 601px;
 	background-color: #f5fcfd;
 	display: flex;
 	justify-content: flex-start;
 	&__photo {
+		height: auto;
 		margin-right: 98px;
 	}
 	&__items {
@@ -577,6 +588,7 @@ body{
 	}
 
 	&__title {
+		line-height: 1.5;
 		margin: 12px 0 25px;
 		font-weight: 500;
 		font-size: 18px;
@@ -599,26 +611,23 @@ body{
 		display: flex;
 		justify-content: space-between;
 		margin: 0 auto;
-		width: 70%;
+		width: 75%;
 	}
-
 	&__title {
 		font-size: 32px;
 		font-weight: 700;
 		margin-bottom: 25px;
 	}
-
 	&__subtitle {
 		font-weight: 300;
 	}
-
 	&__right{
-		padding-top: 44px;
+		padding-top: 34px;
 		text-align: center;
 		width: 50%;
 	}
 	&__btn {
-		padding: 14px 91px 20px 60px;
+		padding: 14px 105px 20px 71px;
 		background: #0f7bff;
 		border-radius: 25px;
 		&--arrow{
@@ -701,9 +710,6 @@ input.widget__btn {
 
 /* Widget
 ===================*/
-
-// inner 51 50
-
 .footer {
 		background-color: #0063dd;
 		color: #fff;
@@ -723,10 +729,10 @@ input.widget__btn {
 			justify-content: space-between;
 		}
 		&__info{
-		margin-top: 9px;
+		margin: 9px 0 0 37px;
 	}
 		&__info a{
-			width: 60%;
+			width: 70%;
 			color: #fff;
 			font-weight: 300;
 			margin-right: 32px;
@@ -734,23 +740,121 @@ input.widget__btn {
 				margin-right: 0;
 			}
 			transition: opacity .1s linear;
-	&:hover{
-	opacity: .7;
-	}
+			&:hover{
+				opacity: .7;
+			}
 		}
 }
 .social {
-		width: 40%;
-		text-align: right;
-		&__item {
-			margin-right: 27px;
-			&:last-child{
-				margin-right: 0;
-			}
-			transition: opacity .1s linear;
-	&:hover{
-	opacity: .7;
-	}
+	width: 30%;
+	text-align: right;
+	&__item {
+		margin-right: 10px;
+		transition: opacity .1s linear;
+		&:last-child{
+			margin-right: 0;
 		}
-	
+		&:hover{
+			opacity: .7;
+		}
+	}
+}
+
+/* Media queries
+===================*/
+// 320px — 480px: мобильные устройства;
+// 481px — 768px: планшеты;
+// 769px — 1024px: маленькие экраны, ноутбуки;
+// 1025px — 1200px: большие экраны;
+// 1201px и больше — очень большие экраны, телевизоры.
+
+
+// (min 320px, max 1920px). 
+// Вёрстка должна поддерживать широкий монитор (2560x1080);
+
+@media (max-width: 1800px) {
+	// header
+	.header:before{
+		left: 0;
+	}
+	.btn--header {
+		top: 22px;
+		right: 8px;
+	}
+	.nav{
+		right: 207px;
+	}
+	//about
+	.about{
+		&__description {
+			padding-left: 41px;
+		}
+		&__item {
+			margin-bottom: 140px;
+		}
+	}
+	//works
+	.works{
+		&__title{
+			font-size: 37px;
+		}
+		&__text{
+			font-size: 20px;
+		}
+	}
+	.steps{
+		&__title{
+			font-size: 20px;
+		}
+		&__text{
+			font-size: 18px;
+		}
+	}
+
+}
+
+@media (max-width: 1400px) {
+	//intro
+	.intro{
+		&__text{
+			font-size: 18px;
+		}
+	}
+	// Features
+	.features {
+		&__inner {
+			width: 75%;
+			padding: 41px 0 110px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+		}
+		&__item {
+			margin: 40px 20px 0;
+		}
+		&__title{
+			font-size: 24px;
+		}
+		&__text{
+			font-size: 18px;
+			line-height: 1.2;
+		}
+	}
+	//About
+	.about{
+		&__inner {
+			margin: 0 60px;
+		}
+		// &__item {
+		// 	margin-bottom: 140px;
+		// }
+		&__text {
+			font-size: 20px;
+			width: 477px;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	//About
 }

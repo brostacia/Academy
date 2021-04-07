@@ -244,7 +244,7 @@ body {
 
 .btn--arrow span:after {
   content: "";
-  background: url("./img/about/Arrow.svg") no-repeat;
+  background: url("/img/about/Arrow.svg") no-repeat;
   height: 40px;
   width: 76px;
   position: absolute;
@@ -259,7 +259,7 @@ body {
 /* Intro
 ===================*/
 .intro {
-  background: url("./img/background.svg") center no-repeat;
+  background: url("/img/background.svg") center no-repeat;
   height: 964px;
   background-size: auto;
   overflow: hidden;
@@ -784,7 +784,7 @@ body {
 
 .trial__btn--arrow span:after {
   content: "";
-  background: url("./img/icons/Arrow-trial.svg") no-repeat;
+  background: url("/img/icons/Arrow-trial.svg") no-repeat;
   height: 40px;
   width: 76px;
   position: absolute;
@@ -937,9 +937,6 @@ input.widget__btn:hover {
   }
   .about__description {
     padding-left: 41px;
-  }
-  .about__item {
-    margin-bottom: 140px;
   }
   .works__title {
     font-size: 37px;

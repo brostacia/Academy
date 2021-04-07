@@ -167,7 +167,7 @@ body{
 			position: relative;
 			&:after{
 				content: "";
-				background: url("/img/about/Arrow.svg") no-repeat;
+				background: url("./img/about/Arrow.svg") no-repeat;
 				height: 40px;
 				width: 76px;
 				position: absolute;
@@ -185,7 +185,7 @@ body{
 /* Intro
 ===================*/
 .intro {
-	background: url("/img/background.svg") center no-repeat;
+	background: url("./img/background.svg") center no-repeat;
 	height: 964px;
 	background-size: auto;
 	overflow: hidden;
@@ -639,7 +639,7 @@ body{
 				font-weight: 700;
 				&:after{
 					content: "";
-					background: url("/img/icons/Arrow-trial.svg") no-repeat;
+					background: url("./img/icons/Arrow-trial.svg") no-repeat;
 					height: 40px;
 					width: 76px;
 					position: absolute;

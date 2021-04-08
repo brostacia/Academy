@@ -212,13 +212,12 @@ body{
 			margin-bottom: 117px;
 			margin-top: 30px;
 			&:before {
-				width: 350px;
-				height: 440px;
+				max-width: 350px;
+				max-height: 440px;
 				left: 253px;
 			}
 			&:nth-child(even):before {
 				left: 306px;
-				
 			}
 		}
 		&__description{
@@ -276,6 +275,7 @@ body{
 	//news
 	.news{
 		&__inner{
+			padding: 0 30px;
 			margin: 75px -15px 10px;
 		}
 		&__subtitle {
@@ -344,6 +344,7 @@ body{
 	  
 		&__text{
 			width: auto;
+			margin-right: 20px;
 		}
 	}
 	//works
@@ -372,6 +373,11 @@ body{
 	}
 	//reviews
 	.reviews{
+		&__item{
+			font-size: 110%;
+			padding: 28px 25px;
+		}
+		
 		&__photo{
 			margin-right: 98px;
 			width: 440px;
@@ -385,6 +391,7 @@ body{
 	//footer
 	.footer {
 		display: block;
+		font-size: 20px;
 		&__copyright {
 			margin-right: 36px;
 			line-height: 1.5;
@@ -395,7 +402,7 @@ body{
 		&__info a{
 			width: auto;
 			display: block;
-			padding-bottom: 10px;
+			padding-bottom: 22px;
 		}
 		
 	}
@@ -410,10 +417,28 @@ body{
 			margin-right: 98px;
 			width: 220px;
     		height: auto;
+			 position: relative;
+			 &:after{
+				padding-right: 37px;
+				position: absolute;
+				content: "Trusted By More Than 55M People";
+				line-height: 1.5;
+				top: 30%;
+				width: 260px;
+				height: 275px;
+				left: 213%;
+				font-size: 31px;
+				font-weight: 700;
+			 }
+			 img{
+				 width: 434px;
+			 }
 		}
 		&__title{
-			margin: 13px auto 19px;
-			text-align: center;
+			display: none;
+		}
+		&__block{
+			padding: 38px 15px;
 		}
 	}
 }
@@ -473,6 +498,21 @@ body{
 		left: 74%;
 	}
   }
+  
+  //about
+  .about{
+ 		&__photo{
+			 img{
+				padding: 0 30px;
+			 }
+			&:before{
+			 left: 146px;
+			 }
+			 &:nth-child(even):before {
+				left: 146px;
+			}
+ 		 }
+	}
   //works
   .works{
 	  &__inner{
@@ -481,6 +521,15 @@ body{
 		&__text{
 			padding: 0 56px 45px;
 		}
+  }
+  //price
+  .cards{
+	  &__item{
+		max-width: 316px;
+	  }
+	  hr{
+		width: 254px;
+	  }
   }
   //trial
   .trial{
@@ -497,7 +546,8 @@ body{
   }
 }
 
-/* ----------------630px-------------*/
+
+/* ----------------800px-------------*/
 @media (max-width: 800px) {
 	//intro
 	.intro{
@@ -516,4 +566,109 @@ body{
 		 left: 68%;
 	 }
 	}
+}
+
+/* ----------------705px-------------*/
+@media (max-width: 705px) {
+	//intro
+	.intro{
+		&__title {
+			font-size: 28px;
+			}
+		&__text {
+				font-size: 16px;
+		}
+	}
+	//price
+	.cards{
+		flex-direction: column;
+		&__item{
+			width: 100%;
+			&:first-child {
+			margin-bottom: 33px;
+			}
+		}
+	}
+	//reviews
+	.reviews__photo img {
+		width: 400px;
+  }
+	//footer
+	.social {
+		margin-right: 30px;
+		&__item {
+			display: flex;
+			flex-direction: column;
+			width: 28px;
+			height: 20px;
+			margin: 15px 0;
+		}
+	}
+
+	.reviews__photo{
+		&:after{
+			left: 196%;
+		}
+		img {
+   	 width: 400px;
+		}
+	}
+}
+
+/* ----------------620px-------------*/
+@media (max-width: 620px) {
+	//about
+.about{
+	&__photo{
+		img{
+			padding: 0 64px;
+		}
+		&:before{
+			left: 76px;
+		}
+		&:nth-child(even):before {
+			left: 76px;
+			}
+		}
+	&__description{
+		padding-top: 41px;
+	}
+}
+
+	//reviews
+	.reviews{
+		&__photo:after {
+			display: none;
+		}
+		&__title {
+			display: block;
+			margin: 0 auto;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+	}
+	//widget
+	input.widget__email {
+		width: 318px;
+	}
+}
+/* ----------------550px-------------*/
+@media (max-width: 550px) {
+	.about{
+		&__photo{
+			&:before{
+				width: 284px;
+				height: 396px;
+			}
+			&:nth-child(even):before {
+				height: 396px;
+				width: 284px;
+				}
+		}
+	}
+	//trial
+	.trial__btn {
+		padding: 14px 61px 14px 51px;
+		}
+	
 }

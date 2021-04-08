@@ -35,16 +35,17 @@
 	}
 }
 .social {
-// width: 30%;
-text-align: right;
-&__item {
-	margin-right: 10px;
-	transition: opacity .1s linear;
-	&:last-child{
-		margin-right: 0;
+	// width: 30%;
+	text-align: right;
+	&__item {
+		margin-right: 10px;
+		transition: opacity .1s linear;
+		
+		&:last-child{
+			margin-right: 0;
+		}
+		&:hover{
+			opacity: .7;
+		}
 	}
-	&:hover{
-		opacity: .7;
-	}
-}
 }

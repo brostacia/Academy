@@ -1,0 +1,50 @@
+
+.footer {
+	background-color: #0063dd;
+	color: #fff;
+	font-weight: 300;
+	&__inner {
+		margin: 0 -15px;
+		display: flex;
+		padding: 51px 0 50px;
+	}
+	&__copyright {
+		width: 50%;
+		margin-top: 9px;
+	}
+	&__right{
+		width: 50%;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__info{
+	margin: 9px 0 0 37px;
+}
+	&__info a{
+		width: 70%;
+		color: #fff;
+		font-weight: 300;
+		margin-right: 32px;
+		&:last-child{
+			margin-right: 0;
+		}
+		transition: opacity .1s linear;
+		&:hover{
+			opacity: .7;
+		}
+	}
+}
+.social {
+width: 30%;
+text-align: right;
+&__item {
+	margin-right: 10px;
+	transition: opacity .1s linear;
+	&:last-child{
+		margin-right: 0;
+	}
+	&:hover{
+		opacity: .7;
+	}
+}
+}

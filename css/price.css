@@ -1,0 +1,76 @@
+.price__inner {
+  margin: 130px -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.price__item {
+  width: 392px;
+}
+
+.price__title {
+  padding-top: 161px;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.price__text {
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  width: 332px;
+}
+
+.cards {
+  width: 66%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cards__item {
+  height: 576px;
+  width: 362px;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 20px 0 rgba(0, 36, 80, 0.08);
+          box-shadow: 0 4px 20px 0 rgba(0, 36, 80, 0.08);
+}
+
+.cards__icon {
+  padding-top: 39px;
+}
+
+.cards__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.cards hr {
+  border-top: 2px solid #e9f3f8;
+  width: 303px;
+  background-color: #e9f3f8;
+  margin: 23px auto;
+}
+
+.cards__list li {
+  font-weight: 300;
+  line-height: 1.84;
+}
+
+.cards__price {
+  font-size: 32px;
+  font-weight: 500;
+  color: #0f7bff;
+  margin: 26px auto 28px;
+}
+
+.cards__price span {
+  font-size: 16px;
+}

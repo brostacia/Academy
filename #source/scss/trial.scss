@@ -1,0 +1,51 @@
+.trial {
+	background-color: #f5fcfd;
+	&__inner {
+		padding: 120px 0 113px;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		width: 75%;
+	}
+	&__title {
+		font-size: 32px;
+		font-weight: 700;
+		margin-bottom: 25px;
+	}
+	&__subtitle {
+		font-weight: 300;
+	}
+	&__right{
+		padding-top: 34px;
+		text-align: center;
+		width: 50%;
+	}
+	&__btn {
+		padding: 14px 105px 20px 71px;
+		background: #0f7bff;
+		border-radius: 25px;
+		&--arrow{
+			width: 175px;
+			height: 50px;
+			span{
+				position: relative;
+				color: #fff;
+				font-weight: 700;
+				&:after{
+					content: "";
+					background: url("../img/icons/Arrow-trial.svg") no-repeat;
+					height: 40px;
+					width: 76px;
+					position: absolute;
+					top: 4px; 
+					right: -92px;
+					}
+			}
+		}
+		transition: opacity .1s linear;
+		&:hover{
+		opacity: .7;
+		}
+	}
+	
+}

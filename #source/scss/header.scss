@@ -1,0 +1,58 @@
+.header {	
+	// относительно контейнера
+	position: absolute;
+	height: 100px;
+	width: 100%;
+   top: 0;
+   left: 0;
+    z-index: 1000;
+	 .fixed {
+		height: auto;
+		position: fixed;
+		background-color: #e6e8f5;
+  }
+	&::before {
+		content: "AppSon";
+		padding: 22px 20px 30px;
+		background-color: #0f7bff;
+
+		color: #fff;
+		font-size: 36px;
+		font-weight: 700;
+		border-bottom-left-radius: 17px;
+		border-bottom-right-radius: 17px;
+
+		position: absolute;
+		top: 0;
+    	left: -15%;
+	}
+}
+
+.nav {
+	display: flex;
+	justify-content: flex-end;
+	position: absolute;
+	top: 35px;
+	right: 10px;
+
+	&__link {
+		font-weight: 500;
+		color: #929292;
+		text-transform: uppercase;
+		margin-left: 32px;
+		text-decoration: none;
+
+		opacity: .75;
+    	transition: opacity .1s linear;
+		 &:hover{
+			opacity: 1;
+		 }
+		&:first-child {
+			margin-left: 0;
+	  	}
+		&.active{
+			color: #0f7cff;
+		}
+
+	}
+}

@@ -1,0 +1,54 @@
+.intro {
+	background: url("../img/background.svg") center no-repeat;
+	height: 964px;
+	background-size: auto;
+	overflow: hidden;
+	padding-top: 170px;
+	text-align: center;
+	&__inner {
+		max-width: 655px;
+		margin: 0 auto;
+	}
+	&__title {
+		font-size: 36px;
+		font-weight: 700;
+
+		margin-bottom: 30px;
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 1.69;
+		color: #929292;
+
+		margin-bottom: 30px;
+	}
+	&__btns{
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		width: 380px;
+		margin-bottom: 40px;
+	}
+}
+
+.device {
+	position: relative;
+	left: -97px;
+		&__one{
+			position: absolute;
+			top: 93px;
+			left: 0;
+		}
+		&__two {
+			position: absolute;
+			top: 0;
+			left: 36%;
+			z-index: 2;
+		}
+		&__three {
+			position: absolute;
+			top: 91px;
+			right: -33%;
+ 			
+		}
+}

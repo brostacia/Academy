@@ -1,0 +1,42 @@
+
+.features {
+	background: #f5fcfd;
+	position: relative;
+	z-index: -2;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		padding: 125px 0 130px;
+		text-align: center;
+		margin: 0 -15px;
+	}
+
+	&__item {
+		width: 362px;
+		height: 290px;
+		background: #fff;
+		margin-top: 40px;
+		&:nth-child(2){
+			margin-top: 40px;
+		}
+		border-radius: 5px;
+  		box-shadow: 0 4px 16px 0 rgba(0, 66, 148, 0.08);
+	}
+
+	&__icon {
+		margin-top: 40px;
+	}
+
+	&__title {
+		margin-top: 25px;
+		margin-bottom: 25px;
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	&__text {
+		font-weight: 300;
+		margin: 0 15px 47px;
+	}
+}

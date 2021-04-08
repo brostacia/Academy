@@ -1,0 +1,62 @@
+.intro {
+  background: url("../img/background.svg") center no-repeat;
+  height: 964px;
+  background-size: auto;
+  overflow: hidden;
+  padding-top: 170px;
+  text-align: center;
+}
+
+.intro__inner {
+  max-width: 655px;
+  margin: 0 auto;
+}
+
+.intro__title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.intro__text {
+  font-size: 16px;
+  line-height: 1.69;
+  color: #929292;
+  margin-bottom: 30px;
+}
+
+.intro__btns {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 380px;
+  margin-bottom: 40px;
+}
+
+.device {
+  position: relative;
+  left: -97px;
+}
+
+.device__one {
+  position: absolute;
+  top: 93px;
+  left: 0;
+}
+
+.device__two {
+  position: absolute;
+  top: 0;
+  left: 36%;
+  z-index: 2;
+}
+
+.device__three {
+  position: absolute;
+  top: 91px;
+  right: -33%;
+}

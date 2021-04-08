@@ -1,0 +1,63 @@
+.header {
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header .fixed {
+  height: auto;
+  position: fixed;
+  background-color: #e6e8f5;
+}
+
+.header::before {
+  content: "AppSon";
+  padding: 22px 20px 30px;
+  background-color: #0f7bff;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  border-bottom-left-radius: 17px;
+  border-bottom-right-radius: 17px;
+  position: absolute;
+  top: 0;
+  left: -15%;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: absolute;
+  top: 35px;
+  right: 10px;
+}
+
+.nav__link {
+  font-weight: 500;
+  color: #929292;
+  text-transform: uppercase;
+  margin-left: 32px;
+  text-decoration: none;
+  opacity: .75;
+  -webkit-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+}
+
+.nav__link:hover {
+  opacity: 1;
+}
+
+.nav__link:first-child {
+  margin-left: 0;
+}
+
+.nav__link.active {
+  color: #0f7cff;
+}

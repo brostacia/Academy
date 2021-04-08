@@ -27,7 +27,7 @@
     	left: -15%;
 	}
 }
-
+/* Nav */
 .nav {
 	display: flex;
 	justify-content: flex-end;
@@ -53,6 +53,45 @@
 		&.active{
 			color: #0f7cff;
 		}
+		&.navburger{
+			display: none;
+		}
+	}
+}
 
+/* Burger */
+.burger {
+	display: none;
+	padding: 28px 2px;
+	position: absolute;
+	right: 0;
+	background: none;
+	border: 0;
+	cursor: pointer;
+
+	&__item {
+		display: block;
+		width: 60px;
+		height: 10px;
+		background-color: #0063dd;
+		font-size: 0;
+		color: transparent;
+		position: relative;
+		&:before,&:after {
+			content: "";
+			height: 100%;
+			background-color: #0063dd;
+			position: absolute;
+			right: 0;
+			z-index: 1;
+		}
+		&:before{
+			width: 60px;
+			top: -19px;
+		}
+		&:after{
+			width: 60px;
+			bottom: -19px;
+		}
 	}
 }

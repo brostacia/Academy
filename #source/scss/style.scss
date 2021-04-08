@@ -30,19 +30,19 @@
 	font-style: normal;
 }
 
-@import "nullstyle.scss";
-@import "header.scss";
-@import "btns.scss";
-@import "intro.scss";
-@import "features.scss";
-@import "about.scss";
-@import "works.scss";
-@import "price.scss";
-@import "reviews.scss";
-@import "news.scss";
-@import "trial.scss";
-@import "widget.scss";
-@import "footer.scss";
+@import "_nullstyle.scss";
+@import "_header.scss";
+@import "_btns.scss";
+@import "_intro.scss";
+@import "_features.scss";
+@import "_about.scss";
+@import "_works.scss";
+@import "_price.scss";
+@import "_reviews.scss";
+@import "_news.scss";
+@import "_trial.scss";
+@import "_widget.scss";
+@import "_footer.scss";
 
 // *{
 // outline: 1px solid red;
@@ -67,7 +67,6 @@ body{
 	border-right: 1px #000 solid;
 }
 
-
 /* Media queries
 ===================*/
 // 320px — 480px: мобильные устройства;
@@ -75,7 +74,6 @@ body{
 // 769px — 1024px: маленькие экраны, ноутбуки;
 // 1025px — 1200px: большие экраны;
 // 1201px и больше — очень большие экраны, телевизоры.
-
 
 // (min 320px, max 1920px). 
 // Вёрстка должна поддерживать широкий монитор (2560x1080);
@@ -95,9 +93,9 @@ body{
 	}
 	//about
 	.about{
-		&__inner {
-			margin: 0 60px;
-		}
+		// &__inner {
+		// 	margin: 0 60px;
+		// }
 		&__item{
 			margin-bottom: 148px;
 		}
@@ -127,6 +125,20 @@ body{
 			font-size: 18px;
 		}
 	}
+	//price
+	.price{
+		&__text{
+			font-size: 18px;
+		}
+	}
+	.cards {
+		&__title {
+			font-size: 20px;
+		}
+		&__list li{
+			font-size: 18px;
+		}
+	}
 	//reviews
 	.reviews{
 		&__photo img{
@@ -142,6 +154,16 @@ body{
 	.intro{
 		&__text{
 			font-size: 18px;
+		}
+
+	}
+	.device {
+		&__one{
+			left: 44px;
+		}
+		
+		&__three {
+			right: -29%;
 		}
 	}
 	// Features
@@ -166,19 +188,48 @@ body{
 	}
 	//About
 	.about{
+		&__inner{
+			padding-top: 60px;
+		}
+		&__item{
+			display: block;
+			margin-left: 0;
+			margin-bottom: 0;
+			margin-top: 0;
+			&:nth-child(even) section {
+				padding-right: 0;
+			}
+			&:nth-child(even)  {
+   		 display: flex;
+			flex-flow: column-reverse;
+			}
+		}
 		&__title{
 			margin-top: 0px;
 		}
-		&__photo:nth-child(even):before {
-			left: 17px;
+		&__photo{
+			text-align: center;
+			margin-bottom: 117px;
+			margin-top: 30px;
+			&:before {
+				width: 350px;
+				height: 440px;
+				left: 253px;
+			}
+			&:nth-child(even):before {
+				left: 306px;
+				
+			}
+		}
+		&__description{
+			margin: 0 auto;
+			padding-left: 0;
 		}
 	}
-		
 	// Works
 	.works{
-		height: 538px;
 		&__inner {
-			padding-top: 64px;
+			padding: 64px 0;
 		}
 	}
 	//price
@@ -192,8 +243,10 @@ body{
 			padding-top: 0;
 			text-align: center;
 		}
+		
 		&__text{
 			width: auto;
+			text-align: center;
 		}
 		&__btns{
 			text-align: center;
@@ -201,9 +254,9 @@ body{
 	}
 	.cards{
 		margin-top: 35px;
-		width: 69%;
+		// width: 69%;
 		&__item:first-child{
-			margin-right: 50px;
+			margin-right: 30px;
 		}
 	}
 	//reviews
@@ -225,15 +278,35 @@ body{
 		&__inner{
 			margin: 75px -15px 10px;
 		}
-		&__content{
-			flex-wrap: wrap;
-			justify-content: center;
+		&__subtitle {
+			font-size: 18px;
+		}
+		&__content {
+			display: block;
+			margin-top: 10px;
 		}
 	}
 	.left{
 		width: auto;
-		&__photo{
+		display: flex;
+    	flex-direction: column;
+    	align-items: center;
+		&__text {
+			font-size: 18px;
 			text-align: center;
+			max-width: 582px;
+		
+		}
+	}
+	.right {
+		display: flex;
+    flex-direction: column;
+    align-items: center;
+		&__title {
+			font-size: 20px;
+		}
+		&__text {
+			font-size: 18px;
 		}
 	}
 	//trial
@@ -255,16 +328,192 @@ body{
 			margin-left: 0;
 		}
 	}
-	.social{
-		padding-right: 20px;
-	}
 }
 
 /* ----------------1024px-------------*/
 @media (max-width: 1024px) {
+	//header
+	.nav {
+		&__link{
+		font-size: 20px;
+		}
+	}
+	//about
 	.about{
+		padding-bottom: 29px;
+	  
 		&__text{
 			width: auto;
 		}
+	}
+	//works
+	.steps{
+		display: block;
+		&__icon{
+			position: relative;
+			margin-right: 50px;
+		}
+		&__item{
+			text-align: left;
+			margin: 0 auto 30px;
+			display: flex;
+			width: 66%;
+			&:nth-child(2n+2):after {
+				display: none;
+				width: 355px;
+				right: 43%;
+				transform: rotate(90deg);
+			}
+		}
+			
+		&__text{
+			line-height: 1.2;
+		}
+	}
+	//reviews
+	.reviews{
+		&__photo{
+			margin-right: 98px;
+			width: 440px;
+    		height: auto;
+		}
+		&__title{
+			margin-top: 21px;
+    		font-size: 25px;
+		}
+	}
+	//footer
+	.footer {
+		display: block;
+		&__copyright {
+			margin-right: 36px;
+			line-height: 1.5;
+		}
+		&__right {
+			width: 40%;
+		}
+		&__info a{
+			width: auto;
+			display: block;
+			padding-bottom: 10px;
+		}
+		
+	}
+}
+
+/* ----------------915px-------------*/
+@media (max-width: 915px) {
+	//reviews
+	.reviews{
+		flex-direction: column;
+		&__photo{
+			margin-right: 98px;
+			width: 220px;
+    		height: auto;
+		}
+		&__title{
+			margin: 13px auto 19px;
+			text-align: center;
+		}
+	}
+}
+
+/* ----------------800px-------------*/
+@media (max-width: 800px) {
+	//header
+	.nav {
+	  display: none;
+	  width: 100%;
+		padding: 10px 0 ;
+
+	  position: absolute;
+	  top: 100%;
+	  left: 0;
+	  background: #0063dd;
+	  &__link{
+		  opacity: 1;
+		  color: #fff;
+		  display: block;
+			margin: 0;
+			padding: 8px 20px;
+			text-align: right;
+			&.active{
+				color: #032247;
+	 		 }
+			&.navburger{
+				display: block;
+			}
+	}
+	//   &.active {
+	// 	display: block;
+	//  }
+	}
+	.btn--header {
+		display: none;
+	}
+	.burger {
+		display: block;
+  }
+  //intro
+  .intro{
+	padding-top: 136px;
+	  height: 862px;
+  }
+  .device {
+	  left: -88px;
+	&__one{
+		max-width: 269px;
+	}
+	&__two {
+		left: 35%;
+		max-width: 343px;
+	}
+	&__three {
+		max-width: 279px;
+		left: 74%;
+	}
+  }
+  //works
+  .works{
+	  &__inner{
+		padding-bottom: 4px;
+	  }
+		&__text{
+			padding: 0 56px 45px;
+		}
+  }
+  //trial
+  .trial{
+	  &__inner{
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: auto;
+		padding: 66px 0;
+	  }
+	  &__left{
+		text-align: center;
+	  }
+  }
+}
+
+/* ----------------630px-------------*/
+@media (max-width: 800px) {
+	//intro
+	.intro{
+		height: 771px;
+	  }
+	.device {
+		left: -49px;
+	 &__one{
+		 max-width: 244px;
+	 }
+	 &__two {
+		 max-width: 301px;
+	 }
+	 &__three {
+		 max-width: 254px;
+		 left: 68%;
+	 }
 	}
 }

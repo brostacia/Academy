@@ -1,10 +1,9 @@
 .works {
-	height: 635px;
 	background: #f5fcfd;
 	position: relative;
 	z-index: -2;
 	&__inner {
-		padding-top: 100px;
+		padding: 100px 0 137px;
 		text-align: center;
 	}
 
@@ -34,10 +33,10 @@
 			content: "";
 			position: absolute;
 			border-top: 3px dashed #0f7bff;
-			width: 780px;
+			width: 642px;
 			z-index: 1;
 			top: 50px;
-			right: -57%;
+			right: -37%;
 		}
 	}
 

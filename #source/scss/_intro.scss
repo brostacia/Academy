@@ -33,22 +33,27 @@
 
 .device {
 	position: relative;
-	left: -97px;
+	left: -124px;
 		&__one{
 			position: absolute;
 			top: 93px;
 			left: 0;
+			max-width: 329px;
+			height: auto;
 		}
 		&__two {
 			position: absolute;
 			top: 0;
 			left: 36%;
 			z-index: 2;
+			max-width: 409px;
+			height: auto;
 		}
 		&__three {
 			position: absolute;
 			top: 91px;
 			right: -33%;
- 			
+			max-width: 329px;
+			height: auto;
 		}
 }

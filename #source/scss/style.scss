@@ -44,9 +44,9 @@
 @import "_widget.scss";
 @import "_footer.scss";
 
-// *{
-// outline: 1px solid red;
-// }
+*{
+outline: 1px solid red;
+}
 
 body{
 	font-family: 'Quicksand';
@@ -590,9 +590,22 @@ body{
 		}
 	}
 	//reviews
-	.reviews__photo img {
+  .reviews__photo{
+		img{
+			width: 400px;
+		}
+		&:after{
+			left: 196%;
+		}
+		img {
 		width: 400px;
+	}
+}
+  //news
+  .left__title{
+	text-align: center;
   }
+
 	//footer
 	.social {
 		margin-right: 30px;
@@ -602,15 +615,6 @@ body{
 			width: 28px;
 			height: 20px;
 			margin: 15px 0;
-		}
-	}
-
-	.reviews__photo{
-		&:after{
-			left: 196%;
-		}
-		img {
-   	 width: 400px;
 		}
 	}
 }
@@ -634,7 +638,10 @@ body{
 		padding-top: 41px;
 	}
 }
-
+	//news
+	.news__inner{
+		margin-top: 21px;
+	}
 	//reviews
 	.reviews{
 		&__photo:after {
@@ -655,20 +662,127 @@ body{
 /* ----------------550px-------------*/
 @media (max-width: 550px) {
 	.about{
+		&__description{
+			width: 100%;
+		}
 		&__photo{
+			img {
+				padding: 0;
+				width: 64%;
+				margin-bottom: 86px;
+			}
 			&:before{
-				width: 284px;
-				height: 396px;
+				height: 326px;
+    			width: 251px;
 			}
 			&:nth-child(even):before {
-				height: 396px;
-				width: 284px;
+				height: 326px;
+    			width: 251px;
 				}
+		}
+		&__title{
+			margin-top: -107px;
+		}
+	}
+	//news
+	.left{
+		&__text{
+			width: 100%;
+		}
+	}
+	.right{
+		&__item{
+			margin: 15px 0;
+		}
+		&__title{
+			margin: 9px 0 7px;
+			font-size: 18px;
+		}
+		&__text{
+			font-size: 16px;
 		}
 	}
 	//trial
-	.trial__btn {
+	.trial
+	&__inner{
+		padding: 26px 0 65px;
+	}
+	// &__right{
+	// 	width: auto;
+	// }
+	&__btn {
 		padding: 14px 61px 14px 51px;
 		}
-	
+	input.widget__email {
+			max-width: 237px;
+		}
+}
+
+/* ----------------460px-------------*/
+@media (max-width: 460px) {
+	//inner
+	.device{
+		margin-right: 101px;
+		&__one{
+			left: 16px;
+		}
+		&__two {
+			max-width: 252px;
+			left: 40%;
+			top: 19px;
+
+		}
+		&__three{
+			max-width: 167px;
+    		left: 101%;
+		}
+	}
+	//works{
+		.works{
+			&__inner{
+				padding: 14px 0;
+			}
+		}
+		.steps{
+			&__item{
+				display: block;
+				text-align: center;
+			}
+			
+			&__icon{
+				margin-right: 0;
+			}
+		}
+	//price
+	.price__inner {
+		margin: 37px 0px;
+	}
+	//trial
+	.trial{
+		&__right{
+		max-width: 80%;
+		}
+	}
+	input.widget{
+		&__email {
+			text-align: center;
+			padding-left: 0px;
+			margin-bottom: 20px;
+		}
+		&__btn {
+			border-radius: 25px;
+		}
+
+	}
+}
+
+/* ----------------425px-------------*/
+@media (max-width: 425px) {
+	//trial
+	.trial__btn{
+		padding: 14px 61px 20px 39px;
+	}
+	input.widget__email {
+		border-radius: 25px;
+	}
 }

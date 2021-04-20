@@ -711,7 +711,7 @@ a:focus, a:active {
 }
 
 .left__photo {
-  margin: 0 0 30px -20px;
+  margin: 0 0 30px -3px;
 }
 
 .left__photo img {
@@ -737,7 +737,7 @@ a:focus, a:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 166px;
+  height: auto;
   margin-bottom: -5px;
 }
 
@@ -944,10 +944,6 @@ input.widget__btn:hover {
   opacity: .7;
 }
 
-* {
-  outline: 1px solid red;
-}
-
 body {
   font-family: 'Quicksand';
   font-size: 16px;
@@ -1091,6 +1087,7 @@ body {
   .about__description {
     margin: 0 auto;
     padding-left: 0;
+    text-align: center;
   }
   .works__inner {
     padding: 64px 0;
@@ -1155,6 +1152,9 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
+  .left__photo {
+    width: 65%;
+  }
   .left__text {
     font-size: 18px;
     text-align: center;
@@ -1202,7 +1202,6 @@ body {
   }
   .about__text {
     width: auto;
-    margin-right: 20px;
   }
   .steps {
     display: block;
@@ -1228,6 +1227,9 @@ body {
   }
   .steps__text {
     line-height: 1.2;
+  }
+  .price__item {
+    margin-right: 0;
   }
   .reviews__item {
     font-size: 110%;
@@ -1414,6 +1416,12 @@ body {
   .intro__text {
     font-size: 16px;
   }
+  .features__inner {
+    padding: 0 0 30px;
+  }
+  .features__icon {
+    margin-top: 10px;
+  }
   .cards {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1424,7 +1432,7 @@ body {
     width: 100%;
   }
   .cards__item:first-child {
-    margin-bottom: 33px;
+    margin: 0 auto 33px;
   }
   .reviews__photo img {
     width: 400px;
@@ -1437,6 +1445,12 @@ body {
   }
   .left__title {
     text-align: center;
+  }
+  .left__photo {
+    width: 75%;
+  }
+  .left__text {
+    width: 100%;
   }
   .social {
     margin-right: 30px;
@@ -1462,6 +1476,8 @@ body {
   }
   .about__photo:before {
     left: 76px;
+    max-width: 301px;
+    max-height: 397px;
   }
   .about__photo:nth-child(even):before {
     left: 76px;
@@ -1471,6 +1487,15 @@ body {
   }
   .news__inner {
     margin-top: 21px;
+  }
+  .right__photo {
+    margin-left: 0;
+  }
+  .right__title {
+    margin-bottom: 27px;
+  }
+  .right__text {
+    font-size: 15px;
   }
   .reviews__photo:after {
     display: none;
@@ -1491,14 +1516,20 @@ body {
   .about__description {
     width: 100%;
   }
+  .about__photo {
+    margin-bottom: 87px;
+  }
   .about__photo img {
     padding: 0;
-    width: 64%;
+    width: 72%;
     margin-bottom: 86px;
   }
   .about__photo:before {
     height: 326px;
     width: 251px;
+  }
+  .about__photo:nth-child(even) img {
+    width: 59%;
   }
   .about__photo:nth-child(even):before {
     height: 326px;
@@ -1510,15 +1541,33 @@ body {
   .left__text {
     width: 100%;
   }
+  .left__photo {
+    width: 90%;
+  }
   .right__item {
-    margin: 15px 0;
+    margin: 15px 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .right__photo {
+    margin: 0 auto;
+  }
+  .right__description {
+    margin: 0 auto;
   }
   .right__title {
     margin: 9px 0 7px;
     font-size: 18px;
+    margin: 0 auto;
+    text-align: center;
   }
   .right__text {
     font-size: 16px;
+    margin: 7px auto;
+    text-align: center;
   }
   .trial
 __inner {
@@ -1534,6 +1583,15 @@ __inner {
 
 /* ----------------460px-------------*/
 @media (max-width: 460px) {
+  .burger__item {
+    height: 6px;
+  }
+  .burger__item:after {
+    bottom: -13px;
+  }
+  .burger__item:before {
+    top: -13px;
+  }
   .device {
     margin-right: 101px;
   }
@@ -1565,22 +1623,159 @@ __inner {
   .trial__right {
     max-width: 80%;
   }
+}
+
+/* ----------------425px-------------*/
+@media (max-width: 425px) {
+  .intro {
+    height: 704px;
+  }
+  .intro__btns {
+    margin-bottom: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 200px;
+    height: 119px;
+  }
+  .features__item {
+    height: auto;
+  }
+  .features__text {
+    font-size: 16px;
+    margin: 0 0 12px;
+  }
+  .about {
+    padding-bottom: 0;
+  }
+  .about__photo:before {
+    height: 287px;
+    width: 213px;
+  }
+  .about__photo:nth-child(even):before {
+    height: 287px;
+    width: 213px;
+  }
+  .about__text {
+    font-size: 16px;
+  }
+  .works__title {
+    font-size: 32px;
+  }
+  .works__text {
+    font-size: 18px;
+  }
+  .steps__text {
+    font-size: 16px;
+  }
+  .reviews__photo img {
+    width: 327px;
+  }
+  .reviews__title {
+    font-size: 20px;
+    width: 181px;
+  }
+  .reviews__item {
+    padding: 28px 7px;
+  }
+  .reviews__text {
+    width: 219px;
+    font-size: 16px;
+  }
+  .trial__inner {
+    padding: 43px 0;
+  }
+  .trial__title {
+    font-size: 30px;
+  }
+  .trial__btn {
+    padding: 14px 61px 20px 39px;
+  }
+  .widget {
+    padding-top: 34px;
+    padding-bottom: 33px;
+  }
   input.widget__email {
     text-align: center;
     padding-left: 0px;
     margin-bottom: 20px;
+    border-radius: 25px;
   }
   input.widget__btn {
     border-radius: 25px;
+  }
+  .footer__inner {
+    font-size: 14px;
+    margin: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-top: 38px;
+  }
+  .footer__copyright {
+    padding: 0;
+    margin: 0 0 15px;
+    text-align: center;
+    width: 100%;
+  }
+  .footer__right {
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .social {
+    margin-right: 0;
+  }
+  .social__item {
+    margin: 0 0 20px;
   }
 }
 
 /* ----------------425px-------------*/
 @media (max-width: 425px) {
-  .trial__btn {
-    padding: 14px 61px 20px 39px;
+  .about__photo img {
+    width: 75%;
   }
-  input.widget__email {
-    border-radius: 25px;
+  .about__photo:before {
+    height: 260px;
+    width: 186px;
+  }
+  .about__photo:nth-child(even):before {
+    height: 260px;
+    width: 186px;
+    left: 57px;
+    top: 0;
+  }
+  .cards__item {
+    padding: 8px;
+  }
+}
+
+/* ----------------350px-------------*/
+@media (max-width: 350px) {
+  .about__photo {
+    margin-bottom: 31px;
+  }
+  .about__photo img {
+    width: 80%;
+  }
+  .about__photo:before {
+    height: 216px;
+    width: 153px;
+    left: 46px;
+    top: -44px;
+  }
+  .about__photo:nth-child(even):before {
+    height: 216px;
+    width: 153px;
+  }
+  .news__title {
+    font-size: 28px;
+  }
+  .news__subtitle {
+    font-size: 17px;
+  }
+  input.widget__btn {
+    padding: 12px 32px 13px;
   }
 }

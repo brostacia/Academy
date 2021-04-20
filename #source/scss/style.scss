@@ -44,9 +44,9 @@
 @import "_widget.scss";
 @import "_footer.scss";
 
-*{
-outline: 1px solid red;
-}
+// *{
+// outline: 1px solid red;
+// }
 
 body{
 	font-family: 'Quicksand';
@@ -223,6 +223,7 @@ body{
 		&__description{
 			margin: 0 auto;
 			padding-left: 0;
+			text-align: center;
 		}
 	}
 	// Works
@@ -291,11 +292,13 @@ body{
 		display: flex;
     	flex-direction: column;
     	align-items: center;
+		 &__photo{
+			width: 65%;
+		 }
 		&__text {
 			font-size: 18px;
 			text-align: center;
 			max-width: 582px;
-		
 		}
 	}
 	.right {
@@ -344,7 +347,6 @@ body{
 	  
 		&__text{
 			width: auto;
-			margin-right: 20px;
 		}
 	}
 	//works
@@ -366,10 +368,13 @@ body{
 				transform: rotate(90deg);
 			}
 		}
-			
 		&__text{
 			line-height: 1.2;
 		}
+	}
+	//price
+	.price__item{
+		margin-right: 0;
 	}
 	//reviews
 	.reviews{
@@ -579,13 +584,22 @@ body{
 				font-size: 16px;
 		}
 	}
+	//features
+	.features{
+		&__inner{
+			padding: 0 0 30px;
+		}
+		&__icon{
+			margin-top: 10px;
+		}
+	}
 	//price
 	.cards{
 		flex-direction: column;
 		&__item{
 			width: 100%;
 			&:first-child {
-			margin-bottom: 33px;
+				margin: 0 auto 33px;
 			}
 		}
 	}
@@ -602,9 +616,17 @@ body{
 	}
 }
   //news
-  .left__title{
-	text-align: center;
-  }
+	.left{
+		&__title{
+			text-align: center;
+		}
+		&__photo{
+			width: 75%;
+		}
+		&__text{
+			width: 100%;
+		}
+}
 
 	//footer
 	.social {
@@ -629,6 +651,8 @@ body{
 		}
 		&:before{
 			left: 76px;
+			max-width: 301px;
+			max-height: 397px;
 		}
 		&:nth-child(even):before {
 			left: 76px;
@@ -642,6 +666,17 @@ body{
 	.news__inner{
 		margin-top: 21px;
 	}
+	.right{
+		&__photo {
+			margin-left: 0;
+		}
+		&__title{
+			margin-bottom: 27px;
+		}
+		&__text{
+			font-size: 15px;
+		}
+}
 	//reviews
 	.reviews{
 		&__photo:after {
@@ -666,18 +701,24 @@ body{
 			width: 100%;
 		}
 		&__photo{
+			margin-bottom: 87px;
 			img {
 				padding: 0;
-				width: 64%;
+				width: 72%;
 				margin-bottom: 86px;
 			}
 			&:before{
 				height: 326px;
     			width: 251px;
 			}
-			&:nth-child(even):before {
-				height: 326px;
-    			width: 251px;
+			&:nth-child(even){
+				img{
+					width: 59%;
+				}
+				&:before {
+					height: 326px;
+					width: 251px;
+					}
 				}
 		}
 		&__title{
@@ -689,17 +730,33 @@ body{
 		&__text{
 			width: 100%;
 		}
+		&__photo{
+			width: 90%;
+		}
 	}
 	.right{
 		&__item{
-			margin: 15px 0;
+			margin: 15px 0 0;
+			display: flex;
+    		flex-wrap: wrap;
+
+		}
+		&__photo{
+			margin: 0 auto;
+		}
+		&__description{
+			margin: 0 auto;
 		}
 		&__title{
 			margin: 9px 0 7px;
 			font-size: 18px;
+			margin: 0 auto;
+			text-align: center;
 		}
 		&__text{
 			font-size: 16px;
+			margin: 7px auto;
+			text-align: center;
 		}
 	}
 	//trial
@@ -720,6 +777,18 @@ body{
 
 /* ----------------460px-------------*/
 @media (max-width: 460px) {
+	//header
+	.burger{
+		&__item{
+			height: 6px;
+			&:after{
+				bottom: -13px;
+			}
+			&:before{
+				top: -13px;
+			}
+		}
+	}
 	//inner
 	.device{
 		margin-right: 101px;
@@ -763,26 +832,193 @@ body{
 		max-width: 80%;
 		}
 	}
-	input.widget{
-		&__email {
-			text-align: center;
-			padding-left: 0px;
-			margin-bottom: 20px;
-		}
-		&__btn {
-			border-radius: 25px;
-		}
+}
 
+/* ----------------425px-------------*/
+@media (max-width: 425px) {
+	//intro
+	.intro{
+		height: 704px;
+		&__btns{
+			margin-bottom: 0;
+			flex-direction: column;
+			width: 200px;
+			height: 119px;
+		}
+	}
+	//features
+	.features{
+		&__item{
+			height: auto;
+		}
+		&__text {
+			font-size: 16px;
+			margin: 0 0 12px;
+		}
+	}
+	//about
+	.about{
+		padding-bottom: 0;
+		&__photo{
+			&:before {
+				height: 287px;
+				width: 213px;
+			}
+			&:nth-child(even):before{
+				height: 287px;
+				width: 213px;
+		  }
+		}
+		&__text{
+			font-size: 16px;
+		}
+	}
+	//works
+	.works{
+		&__title {
+			font-size: 32px;
+		}
+		&__text{
+			font-size: 18px;
+		}
+	}
+	.steps{
+		&__text{
+			font-size: 16px;
+		}
+	}
+	//reviews
+	.reviews{
+	&__photo img {
+		width: 327px;
+	}
+	&__title{
+		font-size: 20px;
+		width: 181px;
+	}
+	&__item{
+		padding: 28px 7px;
+	}
+	&__text{
+		width: 219px;
+		font-size: 16px;
+	}
+}
+	//trial
+	.trial{
+		&__inner{
+			padding: 43px 0;
+		}
+		&__title{
+			font-size: 30px;
+		}
+		&__btn{
+			padding: 14px 61px 20px 39px;
+		}
+	}
+	.widget {
+		padding-top: 34px;
+		padding-bottom: 33px;
+	}
+	input{
+		&.widget{
+			&__email {
+				text-align: center;
+				padding-left: 0px;
+				margin-bottom: 20px;
+				border-radius: 25px;
+			}
+			&__btn {
+				border-radius: 25px;
+			}
+		}
+	}
+	//footer
+	.footer{
+		&__inner{
+			font-size: 14px;
+			margin: 0;
+			flex-wrap: wrap;
+			padding-top: 38px;
+		}
+		&__copyright {
+			padding: 0;
+			margin: 0 0 15px;
+			text-align: center;
+			width: 100%;
+		}
+		&__right{
+			width: 100%;
+			justify-content: space-around;
+		}
+	}
+	.social{
+		margin-right: 0;
+		&__item{
+			margin: 0 0 20px;
+		}
 	}
 }
 
 /* ----------------425px-------------*/
 @media (max-width: 425px) {
-	//trial
-	.trial__btn{
-		padding: 14px 61px 20px 39px;
+	//about
+	.about{
+		&__photo{
+			img{
+				width: 75%;
+			}
+			&:before {
+				height: 260px;
+				width: 186px;
+			}
+			&:nth-child(even):before{
+				height: 260px;
+				width: 186px;
+				left: 57px;
+				top: 0;
+			}
+		}
 	}
-	input.widget__email {
-		border-radius: 25px;
+	//price
+	.cards__item {
+		padding: 8px;
+	}
+}
+
+/* ----------------350px-------------*/
+@media (max-width: 350px) {
+	//about
+	.about{
+		&__photo{
+			margin-bottom: 31px;
+			img{
+				width: 80%;
+			}
+			&:before {
+				height: 216px;
+				width: 153px;
+				left: 46px;
+				top: -44px;
+			}
+			&:nth-child(even):before{
+				height: 216px;
+				width: 153px;
+				
+			}
+		}
+	}
+	//news
+	.news{
+		&__title {
+			font-size: 28px
+		}
+		&__subtitle {
+			font-size: 17px;
+		}
+	}
+	//widget
+	input.widget__btn {
+		padding: 12px 32px 13px;
 	}
 }

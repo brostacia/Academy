@@ -30,7 +30,7 @@
 .left {
 	width: 50%;
 	&__photo {
-		margin: 0 0 30px -20px;
+		margin: 0 0 30px -3px;
 		img{
 			width: 100%;
 		}
@@ -55,7 +55,8 @@
 .right {
 	&__item {
 		display: flex;
-		height: 166px;
+		// max-height: 166px;
+		height: auto;
 		margin-bottom: -5px;
 	}
 

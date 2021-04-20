@@ -105,13 +105,33 @@ a:focus, a:active {
   z-index: 1000;
 }
 
-.header .fixed {
-  height: auto;
+.header.fixed {
   position: fixed;
-  background-color: #e6e8f5;
+  background-color: rgba(15, 123, 255, 0.8);
+  height: 70px;
 }
 
-.header::before {
+.header.fixed:before {
+  padding: 9px 20px 24px;
+}
+
+.header.fixed .btn--header {
+  top: 13px;
+}
+
+.header.fixed .nav {
+  top: 27px;
+}
+
+.header.fixed .nav__link {
+  color: #fff;
+}
+
+.header.fixed .nav__link.active {
+  color: #0a366b;
+}
+
+.header:before {
   content: "AppSon";
   padding: 22px 20px 30px;
   background-color: #0f7bff;
@@ -959,8 +979,6 @@ body {
   max-width: 1146px;
   margin: 0 auto;
   padding: 0 15px;
-  border-left: 1px #000 solid;
-  border-right: 1px #000 solid;
 }
 
 /* Media queries
@@ -1297,6 +1315,23 @@ body {
   .reviews__block {
     padding: 38px 15px;
   }
+  .trial__inner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: auto;
+    padding: 66px 0;
+  }
+  .trial__left {
+    text-align: center;
+  }
 }
 
 /* ----------------800px-------------*/
@@ -1369,26 +1404,9 @@ body {
   .cards hr {
     width: 254px;
   }
-  .trial__inner {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: auto;
-    padding: 66px 0;
-  }
-  .trial__left {
-    text-align: center;
-  }
 }
 
-/* ----------------800px-------------*/
+/* ----------------750px-------------*/
 @media (max-width: 800px) {
   .intro {
     height: 771px;
@@ -1585,12 +1603,15 @@ __inner {
 @media (max-width: 460px) {
   .burger__item {
     height: 6px;
+    width: 50px;
   }
   .burger__item:after {
     bottom: -13px;
+    width: 50px;
   }
   .burger__item:before {
     top: -13px;
+    width: 50px;
   }
   .device {
     margin-right: 101px;
@@ -1753,6 +1774,9 @@ __inner {
 
 /* ----------------350px-------------*/
 @media (max-width: 350px) {
+  .intro {
+    height: 778px;
+  }
   .about__photo {
     margin-bottom: 31px;
   }

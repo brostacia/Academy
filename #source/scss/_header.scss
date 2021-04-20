@@ -6,12 +6,27 @@
    top: 0;
    left: 0;
     z-index: 1000;
-	 .fixed {
-		height: auto;
+	 &.fixed {
 		position: fixed;
-		background-color: #e6e8f5;
+		background-color: rgba(15, 123, 255, .8);
+		height: 70px;
+		&:before{
+			padding: 9px 20px 24px;
+		}
+		.btn--header{
+			top: 13px;
+		}
+		.nav{
+			top: 27px;
+		}
+		.nav__link {
+			color: #fff;
+			&.active{
+				color: #0a366b;
+			}
+		}
   }
-	&::before {
+	&:before {
 		content: "AppSon";
 		padding: 22px 20px 30px;
 		background-color: #0f7bff;
@@ -34,7 +49,6 @@
 	position: absolute;
 	top: 35px;
 	right: 10px;
-
 	&__link {
 		font-weight: 500;
 		color: #929292;

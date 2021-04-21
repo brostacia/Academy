@@ -464,29 +464,52 @@ body{
 /* ----------------800px-------------*/
 @media (max-width: 800px) {
 	//header
+	.header.fixed {
+		.nav__link {
+			color: #000;
+			&.active{
+				color: #0063dd;
+			}
+		}
+	}
+
 	.nav {
 	  display: none;
 	  width: 100%;
 		padding: 10px 0 ;
 
 	  position: absolute;
-	  top: 100%;
+	  top: 88%;
 	  left: 0;
-	  background: #0063dd;
+	//   background: #0063dd;
+		background: #fff;
+
+	  flex-direction: column;
 	  &__link{
 		  opacity: 1;
-		  color: #fff;
+		//   color: #fff;
+			color: #000;
 		  display: block;
 			margin: 0;
-			padding: 8px 20px;
+			padding: 12px 20px;
 			text-align: right;
+
+			border-bottom: 1px solid #b4cbe7;
+			&:first-child{
+				border-top: 1px solid #b4cbe7;
+			}
 			&.active{
-				color: #032247;
+				// color: #032247;
+				color: #0063dd;
+				background: rgb(221, 231, 253);
 	 		 }
 			&.navburger{
 				display: block;
 			}
-	}
+		}
+		&.show{
+			display: flex;
+		}
 	//   &.active {
 	// 	display: block;
 	//  }

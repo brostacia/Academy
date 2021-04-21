@@ -50,3 +50,23 @@
 		line-height: 1.3;
 	}
 }
+
+.slick-dots {
+	display: flex;
+	margin: 30px 0 15px;
+	li.slick-active{
+			button{
+			background-color: #0063dd;
+			}
+	}
+	button{
+		width: 12px;
+		height: 12px;
+		margin-right: 8px;
+		border-radius: 32px;
+		border: solid 1.6px #0063dd;
+		background-color: #f5fcfd;
+		font-size: 0;
+		color: transparent;
+	}
+}

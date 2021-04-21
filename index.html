@@ -2,10 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- карусель, добавить https: -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <meta content="width=1200" name="viewport" id="viewport" /> -->
     <!-- Favicons -->
     <link
       rel="apple-touch-icon"
@@ -38,10 +43,12 @@
   <body>
     <div class="container">
       <header class="header" id="header">
-        <div class="nav">
+        <div class="nav" id="nav">
           <a class="nav__link active" href="#">Home</a>
           <a class="nav__link" href="#" data-scroll="#features">Features</a>
-          <a class="nav__link" href="#" data-scroll="#pricing">Pricing</a>
+          <a class="nav__link" href="#" data-scroll="#pricing" id="navLink"
+            >Pricing</a
+          >
           <a class="nav__link" href="#">Pages</a>
           <a class="nav__link navburger" href="#">Sign up</a>
         </div>
@@ -303,50 +310,58 @@
       <div class="reviews__photo">
         <img src="./img/reviews.svg" alt="rev" />
       </div>
-      <section class="reviews__block">
+      <div class="reviews__block">
         <h2 class="reviews__title">Trusted By More Than 55M People</h2>
         <div class="reviews__items">
-          <div class="reviews__item">
-            <div class="reviews__name">Raisa Moni</div>
-            <div class="reviews__position">Envato Customer</div>
-            <div class="reviews__twitter">
-              <img src="./img/icons/twitter.svg" alt="tw" />
+          <div class="reviews__slider" id="reviewsSlider">
+            <div class="slick-item">
+              <div class="reviews__item">
+                <div class="reviews__name">Lucia Gonsalez</div>
+                <div class="reviews__position">Envato Customer</div>
+                <div class="reviews__twitter">
+                  <img src="./img/icons/twitter.svg" alt="tw" />
+                </div>
+                <div class="reviews__text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore etamet.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="reviews__text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore etamet.
-              </p>
+            <div class="slick-item">
+              <div class="reviews__item">
+                <div class="reviews__name">Raisa Moni</div>
+                <div class="reviews__position">Envato Customer</div>
+                <div class="reviews__twitter">
+                  <img src="./img/icons/twitter.svg" alt="tw" />
+                </div>
+                <div class="reviews__text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore etamet.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__name">Raisa Moni</div>
-            <div class="reviews__position">Envato Customer</div>
-            <div class="reviews__twitter">
-              <img src="./img/icons/twitter.svg" alt="tw" />
-            </div>
-            <div class="reviews__text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore etamet.
-              </p>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__name">Raisa Moni</div>
-            <div class="reviews__position">Envato Customer</div>
-            <div class="reviews__twitter">
-              <img src="./img/icons/twitter.svg" alt="tw" />
-            </div>
-            <div class="reviews__text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore etamet.
-              </p>
+            <div class="slick-item">
+              <div class="reviews__item">
+                <div class="reviews__name">David Cuper</div>
+                <div class="reviews__position">Envato Customer</div>
+                <div class="reviews__twitter">
+                  <img src="./img/icons/twitter.svg" alt="tw" />
+                </div>
+                <div class="reviews__text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore etamet.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
     <!-- ./Reviews -->
 
@@ -502,7 +517,8 @@
       </div>
     </footer>
     <!-- Javascript -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+    <!-- карусель, добавить https: -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
